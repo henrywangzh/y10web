@@ -1,9 +1,77 @@
 body {
-  background-color: lightblue;
+    margin: 0px;
+    padding: 0px;
 }
 
-h1 {
-  color: navy;
-  margin-left: 20px;
+.container {
+            margin: 0px 15%;
+    position:relative;
+        }
+.champion-selection {
+    width: 24.5%;
+    height: auto;
+    display:inline-block;
+    margin: 2px;
+    position: relative;
+    float:left;
 }
-color: white;
+.champion-selection img {
+    height: 420px;
+    width: auto;
+    border-radius:5px;
+    transition: 0.5s ease;
+    margin:3px;
+}
+
+.champion-selection :not(img) {
+    top: 30%;
+    z-index:1;
+    color: black;
+    text-align:center;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    position: absolute;
+    font-weight:bolder;
+    
+}
+.champion-selection h1 {
+    font-size: 40px;
+}
+.champion-selection h3 {
+    top:50%;
+}
+.champion-selection:hover img{
+    filter:blur(2px);
+        opacity:0.8;
+    box-shadow: 0 0 16px black;
+}
+.champion-selection:hover :not(img){
+    opacity: 1;
+}
+
+
+
+
+        #start {
+            background-color: white;
+            color:black;
+            border: 5px solid gold;
+            margin: 100px 0px;
+            text-align: center;
+            font-size: 40px;
+        }
+#fizz {
+    background-color: cornflowerblue;
+    border: 6px solid darkblue;
+    border-left: 10px solid dimgrey;
+    margin-bottom: 30px;
+    text-align:center;  
+    color: white;
+}
+
+.text {
+    border: 3px solid darkblue;
+    color: black;
+}
+
