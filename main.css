@@ -7,13 +7,38 @@ body {
             margin: 0px 15%;
     position:relative;
         }
+.options {
+    margin: 5px 0px;
+}
+.options ul{
+    list-style-type: none;
+    margin: 5px;
+    padding: 10px 0px;
+    display: inline-flex;
+    flex-direction: row;
+    margin: auto;
+    width: 100%;
+    font-family:arial;
+    background-color:dimgray;
+    overflow: hidden;
+}
+.options li {
+    display: inline;
+    margin: auto;
+    float: left;
+}
+.options a {
+    display: block;
+    color: white;
+    
+}
+
 .champion-selection {
     width: 24.5%;
-    height: auto;
-    display:inline-block;
-    margin: 2px;
+    margin: 0.2%;
     position: relative;
     float:left;
+    font-family: cursive;
 }
 .champion-selection img {
     height: 420px;
@@ -43,7 +68,7 @@ body {
 }
 .champion-selection:hover img{
     filter:blur(2px);
-        opacity:0.8;
+        opacity:0.6;
     box-shadow: 0 0 16px black;
 }
 .champion-selection:hover :not(img){
@@ -74,4 +99,3 @@ body {
     border: 3px solid darkblue;
     color: black;
 }
-
