@@ -10,30 +10,28 @@ body {
     margin: 0px 15%;
         }
 .options {
-        background-color:#16;
+        
 }
 .options ul{
-    display:block;
+    background-color:#16;
     list-style-type: none;
     margin: 0;
     padding: 10px 0px;
-    display: inline-flex;
-    flex-direction: row;
     width: 100%;
     overflow: hidden;
 }
 .options li {
    
-    display: inline;
-    padding: 20px;
     float: left;
     background-color:orangered;
 }
 .options li a {
     display: block;
     color: white;
+    text-align:center;
     text-decoration: none;
     font-size: 20px;
+    padding:10px;
     
 }
 .options li a:hover {
