@@ -2,6 +2,7 @@ body {
     padding: 0px;
     margin: 0px;
     padding: 0px;
+    font-family:sansation;
 }
 
 .container {
@@ -9,28 +10,34 @@ body {
     margin: 0px 15%;
         }
 .options {
+        background-color:#16;
 }
 .options ul{
+    display:block;
     list-style-type: none;
+    margin: 0;
     padding: 10px 0px;
     display: inline-flex;
     flex-direction: row;
-    margin: auto;
     width: 100%;
-    font-family:sans-serif;
-    background-color:black;
     overflow: hidden;
 }
 .options li {
+   
     display: inline;
-    margin: auto;
+    padding: 20px;
     float: left;
+    background-color:orangered;
 }
-.options a {
+.options li a {
     display: block;
     color: white;
     text-decoration: none;
+    font-size: 20px;
     
+}
+.options li a:hover {
+    background-color:brown;
 }
 
 .champion-selection {
@@ -82,6 +89,16 @@ footer {
     bottom:0;
 }
 
+.animate {
+    border: 5px solid black;
+    font-size: 30px;
+   animation-duration: 5s;
+            animation-name: slidein;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+            animation-timing-function: linear;
+            position:absolute; 
+}
 
         #start {
             background-color: white;
@@ -90,7 +107,18 @@ footer {
             margin: 100px 0px;
             text-align: center;
             font-size: 40px;
+            
         }
+
+@keyframes slidein {
+    from {
+        margin-left: 20%;
+    }
+    to {
+        margin-left: 60%;
+    }
+}
+
 #fizz {
     background-color: cornflowerblue;
     border: 6px solid darkblue;
