@@ -1,25 +1,24 @@
 body {
+    padding: 0px;
     margin: 0px;
     padding: 0px;
 }
 
 .container {
-            margin: 0px 15%;
     position:relative;
+    margin: 0px 15%;
         }
 .options {
-    margin: 5px 0px;
 }
 .options ul{
     list-style-type: none;
-    margin: 5px;
     padding: 10px 0px;
     display: inline-flex;
     flex-direction: row;
     margin: auto;
     width: 100%;
-    font-family:arial;
-    background-color:dimgray;
+    font-family:sans-serif;
+    background-color:black;
     overflow: hidden;
 }
 .options li {
@@ -30,6 +29,7 @@ body {
 .options a {
     display: block;
     color: white;
+    text-decoration: none;
     
 }
 
@@ -68,14 +68,19 @@ body {
 }
 .champion-selection:hover img{
     filter:blur(2px);
-        opacity:0.6;
+    opacity:0.6;
     box-shadow: 0 0 16px black;
 }
 .champion-selection:hover :not(img){
     opacity: 1;
 }
 
-
+footer {
+    background-color: black;
+    color: white;
+    min-height: 100%;
+    bottom:0;
+}
 
 
         #start {
