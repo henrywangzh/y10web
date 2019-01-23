@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<title>javascript game</title>
+</head>
+<body>
+    <header class = "options">
+             <nav>
+         <ul>
+             <li><a href = "index.html"><i class="fas fa-home"></i> Home</a></li>
+             <li><a href = "champion.html"><i class="fas fa-hiking"></i> Champion Guides</a> </li>
+             <li><a href = "about.html"><i class="fas fa-info-circle"></i> About</a> </li>
+             <li><input type="text" placeholder="Search.."></li>
+             <li><a href = "game.html"><i class="fas fa-gamepad"></i> Game</a> </li>
+             </ul>
+                 </nav>
+         </header>
+<section>
+
+<!-- This div is the canvas -->
+<div>
+<canvas id="canvas" width="0" height="0">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+</div>
+
+<script type="text/javascript">
+/*
+   index.html - draws a dot on the screen, credit to:
+   http://html5.litten.com/moving-shapes-on-the-html5-canvas-with-the-keyboard/
+   programmer: MHoel, Nov 3, 2014
+*/
+
+
+// Set some global variables
+var canvas;
+var ctx;
+var dx = 10;
+var dy = 10;
+var s = 0;
+var x = 150;
+var y = 100;
+var WIDTH = 100;
+var HEIGHT = 100;
+var animation = new Array(
+    "Wizard1.png",
+    "Wizard2.png",
+    "Wizard3.png",
+);
+
+    var background = new Image();
+    background.src = "beach.jpg";
+    var wizard = new Image();
+    wizard.src = "Wizard1.png";
+function circle(x,y,r) {
+	ctx.beginPath();
+	ctx.arc(x, y, r, 0, Math.PI*2, true);
+	ctx.fill();
+}
+
+function rect(x,y,w,h) {
+	ctx.beginPath();
+	ctx.rect(x,y,w,h);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+}
+
+function clear() {
+	ctx.clearRect(0, 0, WIDTH, HEIGHT);
+}
+
+// Important starting function
+function init() {
+	canvas = document.getElementById("canvas");
+	ctx = canvas.getContext("2d");
+	return setInterval(draw, 10); // this is key, tells draw function to fire 10x per second
+}
+
+function doKeyDown(evt){
+	switch (evt.keyCode) {
+		case 38:  /* Up arrow was pressed */
+			
+				y -= dy;
+                wizard.src=animation[(s % 3)];
+                s++;
+               WIDTH = 100;
+                HEIGHT = 100;
+			
+			break;
+		case 40:  /* Down arrow was pressed */
+			
+				y += dy;
+                wizard.src=animation[(s % 3)];
+                 s++;
+               WIDTH = 100;
+                HEIGHT = 100;
+			
+			break;
+		case 37:  /* Left arrow was pressed */
+			
+				x -= dx;
+                wizard.src=animation[(s % 3)];
+                 s++;
+                WIDTH = 100;
+                HEIGHT = 100;
+			
+			break;
+		case 39:  /* Right arrow was pressed */
+			
+				x += dx;
+                wizard.src=animation[(s % 3)];
+                 s++;
+                WIDTH = 100;
+                HEIGHT = 100;
+			
+			break;
+		}
+}
+
+function draw() {
+	ctx.canvas.width = window.innerWidth - 10;
+    ctx.canvas.height = 800;
+    clear();
+	ctx.fillStyle = "black";
+	ctx.strokeStyle = "black";
+	rect(0,0,ctx.canvas.width,800);
+    ctx.drawImage(background, 0, 0, ctx.canvas.width-5, ctx.canvas.height);
+    ctx.drawImage(wizard, x, y, WIDTH, HEIGHT);
+}
+
+// Main part of program
+init();
+window.addEventListener('keydown',doKeyDown,true);
+
+</script>
+</section>
+</body>
+</html>

@@ -10,18 +10,25 @@ body {
     margin: 0px 15%;
         }
 .options {
-    
+    -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    background: orangered;
+    left: 0;
+    padding: 2px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 1px 4px rgba(2, 3, 3, 0.1);
 }
 .options ul{
-    background-color:#111;
     list-style-type: none;
-    margin: 0;
-    padding: 10px 0px;
+    margin: 0px;
+    padding: 0px;
     width: 100%;
     overflow: hidden;
 }
 .options li {
-    float: right;
+    float: left;
     background-color:orangered;
 }
 .options li a {
@@ -31,12 +38,22 @@ body {
     text-decoration: none;
     font-size: 20px;
     padding:10px;
-    
 }
 .options li a:hover {
     background-color:brown;
 }
-
+.options li a.active {
+    background-color:#FF6347;
+}
+.options li input[type=text] {
+  float: right;
+    margin:4px 3px 3px 3px;
+  padding: 8px;
+    padding-right:200px;
+  border: none;
+  
+  font-size: 17px;
+}
 .champion-selection {
     width: 24.5%;
     margin: 0.2%;
@@ -66,6 +83,7 @@ body {
 }
 .champion-selection h1 {
     font-size: 40px;
+    color:white;
 }
 .champion-selection h3 {
     top:50%;
@@ -88,6 +106,7 @@ footer {
 }
 
 .animate {
+    text-decoration:none;
     border: 5px solid black;
     font-size: 30px;
    animation-duration: 5s;
@@ -98,6 +117,7 @@ footer {
             position:absolute; 
 }
         #start {
+            display:block;
             background-color: white;
             color:black;
             border: 5px solid gold;
@@ -105,6 +125,7 @@ footer {
             text-align: center;
             font-size: 40px;  
             transition: 0.5s ease-in-out;
+            text-decoration: none;
         }
 
 #start:hover {
@@ -132,4 +153,53 @@ footer {
 .text {
     border: 3px solid darkblue;
     color: black;
+}
+
+.background {
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+.champion {
+    color:white;
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+    margin:0;
+}
+
+/* The actual popup (appears on top) */
+.popup .popupvideo {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0px 10px;
+  position: absolute;
+  z-index: 1;
+    bottom: 2%;
+
+}
+
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }

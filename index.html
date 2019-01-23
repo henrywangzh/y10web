@@ -4,30 +4,43 @@
     <meta name = "description" content = "This is my Y10 Website">
     <title>Y10 Website</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
     </head>
     
     <body>
         <header class = "options">
              <nav>
          <ul>
-             <li><a href = "index.html">Home</a></li>
-             <li><a href = "champion.html">Champion Guides</a> </li>
-             <li><a href = "about.html">About</a> </li>
+             <li><a href = "index.html"><i class="fas fa-home"></i> Home</a></li>
+             <li><a href = "champion.html"><i class="fas fa-hiking"></i> Champion Guides</a> </li>
+             <li><a href = "about.html"><i class="fas fa-info-circle"></i> About</a> </li>
+             <li><input type="text" placeholder="Search.."></li>
+             <li><a href = "game.html"><i class="fas fa-gamepad"></i> Game</a> </li>
              </ul>
                  </nav>
          </header>
+        
         <img src="project.jpg" height = "100%" width = "100%">
      <div class = "container"> 
          
-          <p class = "animate">  WELCOME</p> <br>
+          <p><a href="kimfamilyformula.html" class = "animate" >WELCOME</a>  </p> <br>
     
-         <div id = "start">
+         <div class="popup" onclick="myFunction()"><div id = "start">
    <u><h1>Professional <br>League of Legends Guides</h1></u> <br>
-   <b>The key to climbing out of bronze</b> <br>
-            </div>
+   <b>The key to climbing to top 1%</b> <br>
+             <small>Much MAXIMUM Value </small>
+             </div>
+  <span class="popupvideo" id="myPopupvid"><video width="1000" height="580"controls id="myVideo">
+  <source src="LCSvideo.mp4" type="video/mp4"  >
+</video></span>
+</div>
+       
          
          
-        </div>   
+        </div>  
+        
         <footer>
         Copyright &copy Hiraeth Entertainment 2018 - 2019
         </footer>
@@ -45,4 +58,13 @@
 </div> 
 -->
     </body>
+    <script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopupvid");
+  popup.classList.toggle("show");
+    document.getElementById('myVideo').pause();
+}
+        
+</script>
 </html>
